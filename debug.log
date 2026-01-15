@@ -7,3 +7,4 @@
 [0115/184040.949:ERROR:third_party\crashpad\crashpad\util\win\registration_protocol_win.cc:108] CreateFile: O sistema não pode encontrar o arquivo especificado. (0x2)
 [0115/184051.822:ERROR:third_party\crashpad\crashpad\util\win\registration_protocol_win.cc:108] CreateFile: O sistema não pode encontrar o arquivo especificado. (0x2)
 [0115/184102.397:ERROR:third_party\crashpad\crashpad\util\win\registration_protocol_win.cc:108] CreateFile: O sistema não pode encontrar o arquivo especificado. (0x2)
+[0115/184112.195:ERROR:third_party\crashpad\crashpad\util\win\registration_protocol_win.cc:108] CreateFile: O sistema não pode encontrar o arquivo especificado. (0x2)
