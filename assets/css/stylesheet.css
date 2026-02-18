@@ -262,7 +262,7 @@ strong {
     row-gap: 20px;
     width: 100%;
     max-width: 1100px;
-    grid-template-rows: repeat(4, auto); /* Cria 4 linhas fixas */
+    grid-template-rows: repeat(5, auto); /* Cria 4 linhas fixas */
     grid-auto-flow: column;
 }
 
@@ -278,6 +278,21 @@ strong {
     font-size: 1.5rem;
     line-height: 1.5;
     display: inline;
+}
+
+.tecnologia {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tecnologia > svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+    display: block;
 }
 
 .container-barra {
@@ -302,7 +317,8 @@ strong {
 }
 
 .barra-js,
-.barra-sql {
+.barra-sql,
+.barra-csharp {
     height: 24px;
     width: 70%;
     background-color: var(--accent);
