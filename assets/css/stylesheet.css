@@ -257,18 +257,18 @@ strong {
 
 .tecnologias {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     column-gap: 100px;
     row-gap: 20px;
     width: 100%;
-    max-width: 1100px;
-    grid-template-rows: repeat(4, auto);
+    max-width: 1250px;
+    grid-template-rows: repeat(5, auto);
     grid-auto-flow: column;
 }
 
 .tecnologia-container {
     display: flex;
-    width: 500px;
+    width: 350px;
     justify-content: space-between;
     align-items: center;
 }
@@ -296,43 +296,51 @@ strong {
 }
 
 .container-barra {
-    width: 500px;
+    width: 350px;
     background-color: #e0e0e0;
     border-radius: 25px;
     margin-bottom: 30px;
+    height: 10px;
     overflow: hidden;
+}
+
+.barra-loading {
+    height: 10px;
+    width: 5%;
+    background-color: var(--accent);
+    text-align: center;
+    color: white;
+    border-radius: 25px 0 0 25px;
+    transition: width 0.4s ease;
 }
 
 .barra-html,
 .barra-css,
 .barra-hardware {
-    height: 24px;
+    height: 10px;
     width: 90%;
     background-color: var(--accent);
     text-align: center;
-    line-height: 24px;
     color: white;
     border-radius: 25px 0 0 25px;
     transition: width 0.4s ease;
 }
 
 .barra-js {
-    height: 24px;
+    height: 10px;
     width: 70%;
     background-color: var(--accent);
     text-align: center;
-    line-height: 24px;
     color: white;
     border-radius: 25px 0 0 25px;
     transition: width 0.4s ease;
 }
 
 .barra-windows {
-    height: 24px;
+    height: 10px;
     width: 100%;
     background-color: var(--accent);
     text-align: center;
-    line-height: 24px;
     color: white;
     border-radius: 25px 0 0 25px;
     transition: width 0.4s ease;
@@ -340,22 +348,20 @@ strong {
 
 .barra-windows-server,
 .barra-linux {
-    height: 24px;
+    height: 10px;
     width: 80%;
     background-color: var(--accent);
     text-align: center;
-    line-height: 24px;
     color: white;
     border-radius: 25px 0 0 25px;
     transition: width 0.4s ease;
 }
 
 .barra-postgresql {
-    height: 24px;
+    height: 10px;
     width: 60%;
     background-color: var(--accent);
     text-align: center;
-    line-height: 24px;
     color: white;
     border-radius: 25px 0 0 25px;
     transition: width 0.4s ease;
