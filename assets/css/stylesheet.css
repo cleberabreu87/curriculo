@@ -59,7 +59,7 @@ nav img {
     border: none;
     padding: 10px;
     background: linear-gradient(to right, var(--contrast), var(--accent));
-    margin: 15px 15px 30px;
+    margin: 15px 15px 150px;
 }
 
 .menu-btn {
