@@ -152,6 +152,7 @@ section:nth-of-type(even) {
 #experiencias,
 #cursos,
 #habilidades,
+#projetos,
 #contatos {
     flex-direction: column;
     justify-content: flex-start;
@@ -395,6 +396,218 @@ strong {
     font-weight: bold;
 }
 
+/* Carrossel de Projetos */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 10px 0;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+}
+
+.carousel-track::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
+
+.project-card {
+    flex: 0 0 calc((100% - 60px) / 3);
+    scroll-snap-align: start;
+    background-color: var(--bg2);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.project-preview {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.project-preview .project-icon {
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.9);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Gradients para os previews dos projetos */
+.erp-preview {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+.cep-preview {
+    background: linear-gradient(135deg, #373b44, #4286f4);
+}
+.cursos-preview {
+    background: linear-gradient(135deg, #8a2387, #e94057, #f27121);
+}
+.login-preview {
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+}
+.lanchonete-preview {
+    background: linear-gradient(135deg, #ff9966, #ff5e62);
+}
+.timer-preview {
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+}
+
+.project-content {
+    padding: var(--space);
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-title {
+    font-size: 1.35rem;
+    color: var(--contrast);
+    margin: 0 0 10px 0;
+    font-weight: bold;
+}
+
+.project-description {
+    font-size: 0.95rem;
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin: 0 0 var(--space) 0;
+    text-align: left;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: var(--space);
+}
+
+.project-tag {
+    font-size: 0.75rem;
+    background-color: var(--bg3);
+    color: var(--text);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project-links {
+    margin-top: auto;
+}
+
+.btn-projeto {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    background-color: var(--accent);
+    color: var(--text);
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-projeto:hover {
+    background-color: var(--contrast);
+    color: var(--text);
+}
+
+.btn-projeto:active {
+    transform: scale(0.98);
+}
+
+/* Botões do Carrossel */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(32, 35, 38, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text);
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: background 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.carousel-btn:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
+
+/* Dots Indicadores */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 30px;
+}
+
+.carousel-dots .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--bg3);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-dots .dot:hover {
+    background-color: var(--accent);
+}
+
+.carousel-dots .dot.active {
+    background-color: var(--contrast);
+    transform: scale(1.2);
+}
+
 @media (max-width: 900px) {
     nav {
         position: fixed;
@@ -529,5 +742,34 @@ strong {
     .detalhe-contato {
         font-size: 1rem;
         word-break: break-all;
+    }
+
+    /* Carousel Responsive Styles */
+    .carousel-container {
+        padding: 0 30px;
+    }
+
+    .project-card {
+        flex: 0 0 calc((100% - 30px) / 2);
+    }
+
+    .carousel-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .carousel-container {
+        padding: 0;
+    }
+
+    .project-card {
+        flex: 0 0 100%;
+    }
+
+    .carousel-btn {
+        display: none;
     }
 }
