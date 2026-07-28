@@ -608,6 +608,28 @@ strong {
     transform: scale(1.2);
 }
 
+.social-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--space);
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.social-links svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: currentColor;
+    transition: fill 0.3s ease;
+}
+
 @media (max-width: 900px) {
     nav {
         position: fixed;
